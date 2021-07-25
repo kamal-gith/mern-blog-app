@@ -7,7 +7,7 @@ export default function Header() {
         <span className="headerTitleSm">Welcome to K A M A L's</span>
         <span className="headerTitleLg">Blog</span>
         <div className="everyone">
-            <span className="headerTitlelast">A Blog for Everyone... <i class="fas fa-user-edit"></i></span>
+            <span className="headerTitlelast">A Blog Site for Everyone... <i class="fas fa-user-edit"></i></span>
           <p className="guest">.....BE my Guest, Write an Article Today!</p>
           </div>
         </div>
