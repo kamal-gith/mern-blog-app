@@ -9,6 +9,8 @@ const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
 
+const PORT = process.env.PORT || 5000;
+
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
@@ -19,6 +21,7 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify:true
+    
   })
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
@@ -37,11 +40,15 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
+if (process.env.NODE_ENV ==='production') {
+  app.use(express.static('client/build'))
+}
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen("5000", () => {
-  console.log("Backend is running.");
+app.listen(PORT, () => {
+  console.log(`Backend is running on ${PORT}`);
 });
