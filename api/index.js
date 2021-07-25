@@ -14,15 +14,14 @@ const PORT = process.env.PORT || 5000;
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
-
+const MONGO_URL = "mongodb+srv://kamalai:o3KJeuK9w2FWIyWX@cluster0.mu2f9.mongodb.net/BLOG?authSource=admin&replicaSet=atlas-9dyp7m-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true"
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify:true
-    
-  })
+mongoose.connect(MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true, 
+})
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
