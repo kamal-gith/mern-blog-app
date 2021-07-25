@@ -39,7 +39,7 @@ export default function Write() {
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
-            <i className="writeIcon fas fa-plus"></i>
+            <i className="writeIcon fas fa-plus"></i><p className='fileInputDesc'>Add an Image</p>
           </label>
           <input
             type="file"
@@ -49,7 +49,7 @@ export default function Write() {
           />
           <input
             type="text"
-            placeholder="Title"
+            placeholder="Add a Title to Your Article"
             className="writeInput"
             autoFocus={true}
             onChange={e=>setTitle(e.target.value)}

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
+import kml from "./images/kml.jpeg"
 
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
@@ -18,12 +19,11 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://i.pinimg.com/236x/1e/3f/58/1e3f587572a7a7b20bbf1828595a1786--holiday-party-themes-holiday-gift-guide.jpg"
+          src={kml}
           alt=""
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui
-          necessitatibus nostrum illum reprehenderit.
+          I'm a Full-Stack Developer and a Machine Learning Enthusiast with deep knowledge of technologies like Reactjs, Nodejs, Python, Git and lots more...
         </p>
       </div>
       <div className="sidebarItem">
@@ -37,13 +37,19 @@ export default function Sidebar() {
         </ul>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">FOLLOW US</span>
+        <span className="sidebarTitle">YOU CAN REACH ME VIA...</span>
         <div className="sidebarSocial">
-          <i className="sidebarIcon fab fa-facebook-square"></i>
-          <i className="sidebarIcon fab fa-twitter-square"></i>
-          <i className="sidebarIcon fab fa-pinterest-square"></i>
-          <i className="sidebarIcon fab fa-instagram-square"></i>
-        </div>
+          <a href="https://www.facebook.com/akuraidreez.kenesi" className='link'><i className="sidebarIcon fab fa-facebook-square"></i></a>
+          <a href="https://www.twitter.com/_idriskamal" className='link'><i className="sidebarIcon fab fa-twitter-square"></i></a>
+          <a href="https://www.linkedin.com/in/idriskamal" className='link'><i className="sidebarIcon fab fa-linkedin"></i></a>
+          <a href="https://www.github.com/kamal-gith" className='link'><i className="sidebarIcon fab fa-github"></i></a>
+          <a href="https://wa.me/+2348116214250" className='link'><i className="sidebarIcon fab fa-whatsapp"></i></a>
+          </div>
+
+          <div className="email-div">
+          <span><h5 className='emailtitle'>Send Me an Email <i class="fas fa-envelope"></i></h5></span>
+          <p className='emailaddress'>kamaldeenidreez@gmail.com</p>
+          </div>
       </div>
     </div>
   );

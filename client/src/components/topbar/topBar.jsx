@@ -13,16 +13,19 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-      </div>
+      <a href="https://www.facebook.com/akuraidreez.kenesi" className='link'><i className="topIcon fab fa-facebook-square"></i></a>
+       <a href="https://www.twitter.com/_idriskamal" className='link'><i className="topIcon fab fa-twitter-square"></i></a>
+       <a href="https://www.linkedin.com/in/idriskamal" className='link'><i className="topIcon fab fa-linkedin"></i></a>
+       <a href="https://www.github.com/kamal-gith" className='link'><i className="topIcon fab fa-github"></i></a>
+       <a href="https://wa.me/+2348116214250" className='link'><i className="topIcon fab fa-whatsapp"></i></a>
+       
+
+    </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              HOME
+              ARTICLES
             </Link>
           </li>
           <li className="topListItem">
