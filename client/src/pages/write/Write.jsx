@@ -3,6 +3,7 @@ import "./write.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
 
+
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -51,17 +52,18 @@ export default function Write() {
             type="text"
             placeholder="Add a Title to Your Article"
             className="writeInput"
-            autoFocus={true}
-            onChange={e=>setTitle(e.target.value)}
+            
           />
+          
         </div>
         <div className="writeFormGroup">
           <textarea
             placeholder="Tell your story..."
             type="text"
             className="writeInput writeText"
-            onChange={e=>setDesc(e.target.value)}
+            
           ></textarea>
+                  
         </div>
         <button className="writeSubmit" type="submit">
           Publish
